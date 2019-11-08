@@ -8,5 +8,6 @@ export const defaultLabel = () => ({
     component: LabelComponent,
     props: {
         title: 'Label',
+        for: 'for'
     },
 });

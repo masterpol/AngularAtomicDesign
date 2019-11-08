@@ -1,7 +1,19 @@
-<app-form>
-    <app-label></app-label>
-    <app-input></app-input>
-    <app-button type="submit" className="main" title="submit"></app-button>
+<app-form [action]="formAction" [className]="'simple-form'">
+    <app-label
+        [for]="molecule-input"
+        [title]="label"
+    ></app-label>
+    <app-input
+        [placeholder]="inputPlaceHolder"
+        [type]="inputType"
+        [maxLength]="inputMaxLength"
+        [minLength]="inputMinLength"
+    ></app-input>
+    <app-button 
+        type="submit" 
+        className="main" 
+        title="submit" 
+    ></app-button>
 </app-form>
 
 

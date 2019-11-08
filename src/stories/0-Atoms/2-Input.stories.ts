@@ -7,9 +7,8 @@ export default {
 export const defaultInput = () => ({
     component: InputComponent,
     props: {
-        title: 'esto',
         placeholder: 'click me',
-        type: 'number',
+        type: 'text',
         maxLength: 15,
     },
 });

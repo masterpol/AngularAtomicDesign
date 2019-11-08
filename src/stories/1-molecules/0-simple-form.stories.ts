@@ -11,6 +11,12 @@ export default {
 export const simpleForm = () => ({
   component: SimpleFormComponent,
   props: {
+    label: 'Enter your name',
+    inputPlaceHolder: 'min length 4, max length 8',
+    inputMaxLength: 8,
+    inputMinLength: 4,
+    inputType: 'text',
+    formAction: '/register-user',
   },
   moduleMetadata: {
     declarations: [ButtonComponent, LabelComponent, InputComponent, FormComponent]
