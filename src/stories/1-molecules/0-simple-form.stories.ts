@@ -11,12 +11,38 @@ export default {
 export const simpleForm = () => ({
   component: SimpleFormComponent,
   props: {
-    label: 'Enter your name',
-    inputPlaceHolder: 'min length 4, max length 8',
-    inputMaxLength: 8,
-    inputMinLength: 4,
-    inputType: 'text',
     formAction: '/register-user',
+    title: 'Simple form',
+    fields: [
+      {
+        inputs: [
+          {
+            label: "name",
+            type: "text",
+            placeholder: "type your name",
+            inputMaxLength: 8,
+            inputMinLength: 4,
+            name: "name"
+          },
+          {
+            label: "last name",
+            type: "text",
+            placeholder: "type your lastname",
+            name: "lastname",
+          }
+        ]
+      },
+      {
+        inputs: [
+          {
+            label: "phone Number",
+            type: "number",
+            placeholder: "phone number",
+            name: "phone",
+          }
+        ]
+      }
+    ]
   },
   moduleMetadata: {
     declarations: [ButtonComponent, LabelComponent, InputComponent, FormComponent]

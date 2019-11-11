@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InputComponent implements OnInit {
   @Input() placeholder: String;
   @Input() type: String;
+  @Input() name: String;
   @Input() inputType: String = 'text';
   @Input() maxLength: Number = 100;
   @Input() minLength: Number = 0;

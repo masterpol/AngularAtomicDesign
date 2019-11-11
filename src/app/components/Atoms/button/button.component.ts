@@ -14,12 +14,12 @@ export class ButtonComponent implements OnInit {
 
   getClass(type: string):String {
     const types = {
-      main: 'btn-main',
+      main: 'btn-primary',
       success: 'btn-success',
       danger: 'btn-danger',
     };
 
-    return `btn ${types[type] ? types[type] : 'btn-default'}`;
+    return `btn ${types[type] ? types[type] : 'btn-secondary'}`;
   }
 
   ngOnInit() {}

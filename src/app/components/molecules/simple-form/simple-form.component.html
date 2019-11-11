@@ -1,14 +1,22 @@
-<app-form [action]="formAction" [className]="'simple-form'">
-    <app-label
-        [for]="molecule-input"
-        [title]="label"
-    ></app-label>
-    <app-input
-        [placeholder]="inputPlaceHolder"
-        [type]="inputType"
-        [maxLength]="inputMaxLength"
-        [minLength]="inputMinLength"
-    ></app-input>
+<app-form [action]="formAction" [className]="'col-12'">
+    <h3>{{title}}</h3>
+    <ng-template ngFor let-field [ngForOf]="fields" let-i="index">
+        <div class="row">
+            <div class="form-group" *ngFor="let input of field.inputs; index as i;" [ngClass]="{'col-6': field.inputs.length > 1, 'col-12': field.inputs.length === 1 }">
+                <app-label
+                    [for]="input.name"
+                    [title]="input.label"
+                ></app-label>
+                <app-input
+                    [placeholder]="input.placeholder"
+                    [type]="input.type"
+                    [maxLength]="input.inputMaxLength"
+                    [minLength]="input.inputMinLength"
+                    [name]="input.name"
+                ></app-input>
+            </div>
+        </div>
+    </ng-template>
     <app-button 
         type="submit" 
         className="main" 

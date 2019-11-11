@@ -6,11 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./simple-form.component.scss']
 })
 export class SimpleFormComponent implements OnInit {
-  @Input() label: String;
-  @Input() inputPlaceHolder: String;
-  @Input() inputType: String;
-  @Input() inputMaxLength: Number;
-  @Input() inputMinLength: Number;
+  @Input() fields: Array<Object>;
+  @Input() title: String;
   @Input() formAction: String;
 
   constructor() { }

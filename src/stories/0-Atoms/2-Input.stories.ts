@@ -10,5 +10,6 @@ export const defaultInput = () => ({
         placeholder: 'click me',
         type: 'text',
         maxLength: 15,
+        name: 'name'
     },
 });
